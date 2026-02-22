@@ -15,7 +15,7 @@ WOOD_TYPES = [
     'warped_stem'
 ]
 
-OUTPUT_DIR = "woodcutter_datapack/data/minecraft/woodcutter/recipes"
+OUTPUT_DIR = "woodcutter_datapack/data/woodcutter/recipe"
 
 
 def ensure_output_dir():
@@ -40,8 +40,10 @@ def generate_plank_to_slabs():
             "ingredient": {
                 "item": f"minecraft:{planks}"
             },
-            "result": f"minecraft:{wood_type}_slab",
-            "count": 2
+            "result": {
+                "id": f"minecraft:{wood_type}_slab",
+                "count": 2
+            } 
         }
 
         file_path = os.path.join(
@@ -63,8 +65,10 @@ def generate_plank_to_stairs():
             "ingredient": {
                 "item": f"minecraft:{planks}"
             },
-            "result": f"minecraft:{wood_type}_stairs",
-            "count": 1
+            "result": {
+                "id": f"minecraft:{wood_type}_stairs",
+                "count": 1
+            } 
         }
 
         file_path = os.path.join(
