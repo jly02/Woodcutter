@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "biomeswevegone:sakura_log"
+  },
+  "result": {
+    "id": "biomeswevegone:sakura_fence",
+    "count": 2
+  }
+}

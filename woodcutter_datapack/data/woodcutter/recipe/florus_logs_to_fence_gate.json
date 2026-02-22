@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "biomeswevegone:florus_log"
+  },
+  "result": {
+    "id": "biomeswevegone:florus_fence_gate",
+    "count": 1
+  }
+}

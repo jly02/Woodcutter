@@ -19,7 +19,30 @@ VANILLA_WOOD_TYPES = [
 ]
 
 BIOMES_WOOD_TYPES = [
-    
+    "aspen_log",
+    "baobab_log",
+    "blue_enchanted_log",
+    "cika_log",
+    "cypress_log",
+    "ebony_log",
+    "fir_log",
+    "florus_log",
+    "green_enchanted_log",
+    "holly_log",
+    "ironwood_log",
+    "jacaranda_log",
+    "mahogany_log",
+    "maple_log",
+    "palm_log",
+    "pine_log",
+    "rainbow_eucalyptus_log",
+    "redwood_log",
+    "sakura_log",
+    "skyris_log",
+    "white_mangrove_log",
+    "willow_log",
+    "witch_hazel_log",
+    "zelkova_log"
 ]
 
 OUTPUT_DIR = "woodcutter_datapack/data/woodcutter/recipe"

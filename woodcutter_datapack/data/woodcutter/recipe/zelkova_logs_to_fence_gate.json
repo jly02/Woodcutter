@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "biomeswevegone:zelkova_log"
+  },
+  "result": {
+    "id": "biomeswevegone:zelkova_fence_gate",
+    "count": 1
+  }
+}

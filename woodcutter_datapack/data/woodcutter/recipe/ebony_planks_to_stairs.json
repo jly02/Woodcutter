@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "biomeswevegone:ebony_planks"
+  },
+  "result": {
+    "id": "biomeswevegone:ebony_stairs",
+    "count": 1
+  }
+}

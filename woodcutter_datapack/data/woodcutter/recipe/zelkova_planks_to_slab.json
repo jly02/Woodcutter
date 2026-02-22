@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "biomeswevegone:zelkova_planks"
+  },
+  "result": {
+    "id": "biomeswevegone:zelkova_slab",
+    "count": 2
+  }
+}

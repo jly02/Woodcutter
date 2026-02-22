@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "biomeswevegone:witch_hazel_planks"
+  },
+  "result": {
+    "id": "biomeswevegone:witch_hazel_slab",
+    "count": 2
+  }
+}

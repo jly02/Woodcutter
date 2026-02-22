@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "biomeswevegone:sakura_planks"
+  },
+  "result": {
+    "id": "biomeswevegone:sakura_stairs",
+    "count": 1
+  }
+}

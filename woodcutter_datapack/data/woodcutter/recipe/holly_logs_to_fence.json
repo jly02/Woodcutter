@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "biomeswevegone:holly_log"
+  },
+  "result": {
+    "id": "biomeswevegone:holly_fence",
+    "count": 2
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "biomeswevegone:aspen_planks"
+  },
+  "result": {
+    "id": "biomeswevegone:aspen_slab",
+    "count": 2
+  }
+}

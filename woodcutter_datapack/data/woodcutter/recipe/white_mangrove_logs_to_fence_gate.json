@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "biomeswevegone:white_mangrove_log"
+  },
+  "result": {
+    "id": "biomeswevegone:white_mangrove_fence_gate",
+    "count": 1
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "biomeswevegone:cypress_log"
+  },
+  "result": {
+    "id": "biomeswevegone:cypress_fence_gate",
+    "count": 1
+  }
+}

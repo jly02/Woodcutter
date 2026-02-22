@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "biomeswevegone:fir_log"
+  },
+  "result": {
+    "id": "biomeswevegone:fir_fence",
+    "count": 2
+  }
+}

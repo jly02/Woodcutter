@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "biomeswevegone:willow_planks"
+  },
+  "result": {
+    "id": "biomeswevegone:willow_stairs",
+    "count": 1
+  }
+}

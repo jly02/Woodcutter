@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "biomeswevegone:mahogany_planks"
+  },
+  "result": {
+    "id": "biomeswevegone:mahogany_slab",
+    "count": 2
+  }
+}

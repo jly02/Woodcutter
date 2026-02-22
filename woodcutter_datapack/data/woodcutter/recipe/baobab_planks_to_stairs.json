@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "biomeswevegone:baobab_planks"
+  },
+  "result": {
+    "id": "biomeswevegone:baobab_stairs",
+    "count": 1
+  }
+}

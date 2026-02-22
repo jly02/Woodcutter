@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "biomeswevegone:palm_planks"
+  },
+  "result": {
+    "id": "biomeswevegone:palm_slab",
+    "count": 2
+  }
+}

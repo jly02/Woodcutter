@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "biomeswevegone:jacaranda_planks"
+  },
+  "result": {
+    "id": "biomeswevegone:jacaranda_slab",
+    "count": 2
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "biomeswevegone:ironwood_log"
+  },
+  "result": {
+    "id": "biomeswevegone:ironwood_fence",
+    "count": 2
+  }
+}

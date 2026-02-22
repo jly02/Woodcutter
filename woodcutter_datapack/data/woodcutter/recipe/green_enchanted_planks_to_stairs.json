@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "biomeswevegone:green_enchanted_planks"
+  },
+  "result": {
+    "id": "biomeswevegone:green_enchanted_stairs",
+    "count": 1
+  }
+}

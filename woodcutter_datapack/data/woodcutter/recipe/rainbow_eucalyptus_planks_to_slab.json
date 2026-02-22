@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "biomeswevegone:rainbow_eucalyptus_planks"
+  },
+  "result": {
+    "id": "biomeswevegone:rainbow_eucalyptus_slab",
+    "count": 2
+  }
+}
