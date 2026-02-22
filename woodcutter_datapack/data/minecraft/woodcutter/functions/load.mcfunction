@@ -1,0 +1,1 @@
+tellraw @a [{"text":"[Woodcutter] Datapack loaded successfully!","color":"green"}]
