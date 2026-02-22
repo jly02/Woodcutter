@@ -18,7 +18,9 @@ VANILLA_WOOD_TYPES = [
     'warped_stem'
 ]
 
-BIOMES_WOOD_TYPES = []
+BIOMES_WOOD_TYPES = [
+    
+]
 
 OUTPUT_DIR = "woodcutter_datapack/data/woodcutter/recipe"
 
@@ -112,13 +114,47 @@ def generate_log_to_fence(prefix, wood_types):
         with open(file_path, "w") as f:
             json.dump(recipe, f, indent=2)
 
+def generate_log_to_fence_gate(prefix, wood_types):
+    for log in wood_types:
+        planks = log_to_planks_name(log)
+        wood_type = planks.replace("_planks", "")
+
+        recipe = {
+            "type": "minecraft:stonecutting",
+            "ingredient": {
+                "item": f"{prefix}:{log}"
+            },
+            "result": {
+                "id": f"{prefix}:{wood_type}_fence_gate",
+                "count": 1
+            } 
+        }
+
+        file_path = os.path.join(
+            OUTPUT_DIR,
+            f"{log}s_to_fence_gate.json"
+        )
+
+        with open(file_path, "w") as f:
+            json.dump(recipe, f, indent=2)
 
 if __name__ == '__main__':
     ensure_output_dir()
-    prefix_and_wood_types = [(VANILLA_PREFIX, VANILLA_WOOD_TYPES), (BIOMES_PREFIX, BIOMES_WOOD_TYPES)]
+
+    prefix_and_wood_types = [
+        (VANILLA_PREFIX, VANILLA_WOOD_TYPES), 
+        (BIOMES_PREFIX, BIOMES_WOOD_TYPES)
+    ]
+
+    generators = [
+        generate_plank_to_slabs, 
+        generate_plank_to_stairs, 
+        generate_log_to_fence,
+        generate_log_to_fence_gate
+    ]
+
     for prefix, wood_type in prefix_and_wood_types:
-        generate_plank_to_slabs(prefix, wood_type)
-        generate_plank_to_stairs(prefix, wood_type)
-        generate_log_to_fence(prefix, wood_type)
+        for generator in generators:
+            generator(prefix, wood_type)
     
     print("Recipes generated successfully!")
