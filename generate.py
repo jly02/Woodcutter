@@ -45,6 +45,7 @@ BIOMES_WOOD_TYPES = [
     "zelkova_log"
 ]
 
+
 OUTPUT_DIR = "woodcutter_datapack/data/woodcutter/recipe"
 
 
@@ -112,6 +113,7 @@ def generate_plank_to_stairs(prefix, wood_types):
         with open(file_path, "w") as f:
             json.dump(recipe, f, indent=2)
 
+
 def generate_log_to_fence(prefix, wood_types):
     # 1:2
     for log in wood_types:
@@ -137,6 +139,7 @@ def generate_log_to_fence(prefix, wood_types):
         with open(file_path, "w") as f:
             json.dump(recipe, f, indent=2)
 
+
 def generate_log_to_fence_gate(prefix, wood_types):
     for log in wood_types:
         planks = log_to_planks_name(log)
@@ -161,6 +164,7 @@ def generate_log_to_fence_gate(prefix, wood_types):
         with open(file_path, "w") as f:
             json.dump(recipe, f, indent=2)
 
+
 if __name__ == '__main__':
     ensure_output_dir()
 
@@ -170,8 +174,8 @@ if __name__ == '__main__':
     ]
 
     generators = [
-        generate_plank_to_slabs, 
-        generate_plank_to_stairs, 
+        generate_plank_to_slabs,
+        generate_plank_to_stairs,
         generate_log_to_fence,
         generate_log_to_fence_gate
     ]
