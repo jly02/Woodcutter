@@ -1,7 +1,10 @@
 import json
 import os
 
-WOOD_TYPES = [
+VANILLA_PREFIX = 'minecraft'
+BIOMES_PREFIX = 'biomeswevegone'
+
+VANILLA_WOOD_TYPES = [
     'oak_log',
     'spruce_log',
     'birch_log',
@@ -15,6 +18,8 @@ WOOD_TYPES = [
     'warped_stem'
 ]
 
+BIOMES_WOOD_TYPES = []
+
 OUTPUT_DIR = "woodcutter_datapack/data/woodcutter/recipe"
 
 
@@ -23,6 +28,9 @@ def ensure_output_dir():
 
 
 def log_to_planks_name(log_name: str) -> str:
+    """
+    Utility function for renaming where needed.
+    """
     if log_name.endswith("_log"):
         return log_name.replace("_log", "_planks")
     if log_name.endswith("_stem"):
@@ -30,18 +38,18 @@ def log_to_planks_name(log_name: str) -> str:
     raise ValueError(f"Unsupported wood type: {log_name}")
 
 
-def generate_plank_to_slabs():
-    for log in WOOD_TYPES:
+def generate_plank_to_slabs(prefix, wood_types):
+    for log in wood_types:
         planks = log_to_planks_name(log)
         wood_type = planks.replace("_planks", "")
 
         recipe = {
             "type": "minecraft:stonecutting",
             "ingredient": {
-                "item": f"minecraft:{planks}"
+                "item": f"{prefix}:{planks}"
             },
             "result": {
-                "id": f"minecraft:{wood_type}_slab",
+                "id": f"{prefix}:{wood_type}_slab",
                 "count": 2
             } 
         }
@@ -55,18 +63,18 @@ def generate_plank_to_slabs():
             json.dump(recipe, f, indent=2)
 
 
-def generate_plank_to_stairs():
-    for log in WOOD_TYPES:
+def generate_plank_to_stairs(prefix, wood_types):
+    for log in wood_types:
         planks = log_to_planks_name(log)
         wood_type = planks.replace("_planks", "")
 
         recipe = {
             "type": "minecraft:stonecutting",
             "ingredient": {
-                "item": f"minecraft:{planks}"
+                "item": f"{prefix}:{planks}"
             },
             "result": {
-                "id": f"minecraft:{wood_type}_stairs",
+                "id": f"{prefix}:{wood_type}_stairs",
                 "count": 1
             } 
         }
@@ -79,9 +87,38 @@ def generate_plank_to_stairs():
         with open(file_path, "w") as f:
             json.dump(recipe, f, indent=2)
 
+def generate_log_to_fence(prefix, wood_types):
+    # 1:2
+    for log in wood_types:
+        planks = log_to_planks_name(log)
+        wood_type = planks.replace("_planks", "")
+
+        recipe = {
+            "type": "minecraft:stonecutting",
+            "ingredient": {
+                "item": f"{prefix}:{log}"
+            },
+            "result": {
+                "id": f"{prefix}:{wood_type}_fence",
+                "count": 2
+            } 
+        }
+
+        file_path = os.path.join(
+            OUTPUT_DIR,
+            f"{log}s_to_fence.json"
+        )
+
+        with open(file_path, "w") as f:
+            json.dump(recipe, f, indent=2)
+
 
 if __name__ == '__main__':
     ensure_output_dir()
-    generate_plank_to_slabs()
-    generate_plank_to_stairs()
+    prefix_and_wood_types = [(VANILLA_PREFIX, VANILLA_WOOD_TYPES), (BIOMES_PREFIX, BIOMES_WOOD_TYPES)]
+    for prefix, wood_type in prefix_and_wood_types:
+        generate_plank_to_slabs(prefix, wood_type)
+        generate_plank_to_stairs(prefix, wood_type)
+        generate_log_to_fence(prefix, wood_type)
+    
     print("Recipes generated successfully!")
